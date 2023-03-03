@@ -1,0 +1,163 @@
+@import url('https://fonts.loli.net/css?family=Open+Sans|Open+Sans+Condensed:300,700');
+.card {
+  display: inline-block;
+  width: 180px;
+  padding: 2px;
+  border-radius: 0;
+  margin: 10px;
+  background: #333;
+  text-align: center;
+  box-shadow: 0px 5px 30px -10px #111;
+  position: relative;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.card__caption {
+  color: #fff;
+  background-color:rgba(35, 35, 35, 0.9);
+  padding: 0em 1em 1em 1em;
+  height:160px;
+  position: relative;
+  border-radius: 0;
+}
+.card__image-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 0;
+}
+.card__type {
+  text-align:center;
+  transform: translateY(-50%);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  border-radius: 0;
+  background: #bbb;
+}
+.card__label {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 3px;
+  margin-left: 3px;
+}
+.card__name {
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 900;
+  line-height: 1;
+  border-radius: 0;
+  padding-top: 10px;
+}
+.card__stats {
+  margin: 1em 0;
+}
+.card__stats th {
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+  text-align: right;
+  font-weight: 300;
+}
+.card__stats th, .card__stats td {
+  width: 50%;
+  padding: 0.25em 0.5em 0;
+}
+.card__abilities {
+  text-align:right;
+}
+.card__ability {
+  margin-top: 1em;
+  flex: 1 0;
+}
+.card--default {
+  background: linear-gradient(110deg, #282116 0%, #020202 100%);
+  box-shadow: 0px 5px 30px -10px #050403;
+}
+.card--default .card__type {
+  background-color: #212120;
+}
+.card--joker {
+  background: linear-gradient(110deg, #3F0C71 0%, #FFBA13 100%);
+  box-shadow: 0px 2px 20px -10px #B87FD9;
+}
+.card--joker .card__type {
+  background-color: #3F0C71;
+}
+.card--peasant {
+  background: linear-gradient(110deg, #28597F 0%, #CAA630 100%);
+  box-shadow: 0px 2px 20px -10px #7CB3B5;
+}
+.card--peasant .card__type {
+  background-color: #28597F;
+}
+.card--guard {
+  background: linear-gradient(140deg, #111111 0%, #cccccc 39%, #131214 100%);
+  box-shadow: 0px 5px 30px -10px #aaaaaa;
+}
+.card--guard .card__type {
+  background-color: #0C0C0C;
+}
+.card--knight {
+  background: linear-gradient(140deg, #848484 0%, #444444 39%, #FBB03B 100%);
+  box-shadow: 0px 5px 30px -10px #FBB03B;
+}
+.card--knight .card__type {
+  background-color: #FBB03B;
+}
+.card--master_knight {
+  background: linear-gradient(20deg,#FF1026  0%, #FBB03B 30%, #282828 100%);
+  box-shadow: 0px 5px 30px -10px #35060D;
+}
+.card--master_knight .card__type {
+  background-color: #FF1026;
+}
+.card--lord {
+  background: linear-gradient(140deg, #1e1d21 0%, #fcad04 39%, #22b573 100%);
+  box-shadow: 0px 5px 30px -10px #105838;
+}
+.card--lord .card__type {
+  background: #22b573;
+}
+.card--duke {
+  background: linear-gradient(140deg, #0097d3 0%, #000 100%);
+  box-shadow: 0px 5px 30px -10px #0097d3;
+}
+.card--duke .card__type {
+  background: #0097d3;
+}
+.card--prince {
+  background: linear-gradient(45deg, #424242 0%, #2F2C28 50%, #39b54a 100%);
+  box-shadow: 0px 5px 30px -10px #39b54a;
+}
+.card--prince .card__type {
+  background: #1e702a;
+}
+.card--king {
+  background: linear-gradient(45deg, #d6a700 30%, #39b54a 100%);
+  box-shadow: 0px 5px 30px -10px #f9c700;
+}
+.card--king .card__type {
+  background: #d6a700;
+}
+.card--emperor {
+  background: linear-gradient(45deg, #ff0000 0%, #310067 70%, #3000a5 100%);
+  box-shadow: 0px 5px 30px -10px #c50000;
+}
+.card--emperor .card__type {
+  background: #B70006;
+}
+.card:hover {
+  z-index: 5;
+  box-shadow: 0px 13px 30px -15px #000;
+  transform: scale(1.05);
+}
+
+.card .card-body ul li
+{
+  color: #fff;
+  background-color:#444;
+  border:0;
+}
