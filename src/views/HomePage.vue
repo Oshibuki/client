@@ -7,18 +7,19 @@
    <div class="box bg-default-light">
     <div class="box-body box-header-border-top">
      <div class="col-md-8">
-      <h3 style="font-family: Open Sans Condensed, Open Sans, helvetica, sans-serif;"><b>Welcome NeverwinterSwor!</b></h3>
+      <h3 style="font-family: Open Sans Condensed, Open Sans, helvetica, sans-serif;"><b>Welcome {{userStore.username}}!</b></h3>
      </div>
      <div class="text-right col-md-4">
-      <span id="online_users" class="info-box-number text-green">
-
-1 <small>ONLINE USERS | SA</small>
-</span>
-      <div id="servers_count">
-       <span class="label label-success">BATTLES: 0</span>
-       <span class="label label-success">GROUPFIGHTS: 0</span>
-       <!-- <span class="label label-success">DUELS: -->  <!-- </span> -->
-      </div>
+        <Suspense>
+        <template #default>
+            <region-status></region-status>
+        </template>
+        <template #fallback>
+            <div>
+                <h5>数据加载中……</h5>
+            </div>
+        </template>
+    </Suspense>
      </div>
     </div>
    </div>
@@ -212,10 +213,12 @@ questions regarding outstanding changes.</p>
 
 
 </template>
-<script>
-export default {
+<script setup>
+import RegionStatus from '../components/regionStatus.vue'
+import useUserStore from '../stores/user';
 
-}
+const userStore = useUserStore()
+
 </script>
 <style lang="">
     

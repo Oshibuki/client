@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import pinia from './stores'
-import axios from 'axios'
+import axios from './utils/httpClient'
 import VueAxios from 'vue-axios'
 import App from './App.vue'
 import router from './router'
@@ -12,23 +12,23 @@ import router from './router'
 // import.meta.globEager('./assets/sounds/*');
 
 const app = createApp(App)
-axios.defaults.withCredentials = true;
 app.use(VueAxios, axios)
 app.use(pinia)
-app.use(router) 
-
+app.use(router)
 app.mount('#app')
 
 //jquery
 import $ from 'jquery';
 window.$ = $;
+window.jQuery = $
 //jquery-ui
 import 'jquery-ui-dist/jquery-ui'
 import 'jquery-ui-dist/jquery-ui.min.css'
 //bootstrap3
 import 'bootstrap3/dist/js/bootstrap.min.js'
 //admin-lte
-import 'admin-lte/dist/js/adminlte.min.js'
+// import 'admin-lte/dist/js/adminlte.min.js'
+import '@/assets/js/adminlte.js';
 //tooltipster
 import 'tooltipster/dist/js/tooltipster.bundle.min.js'
 import 'tooltipster/dist/css/tooltipster.bundle.min.css'

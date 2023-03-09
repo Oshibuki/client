@@ -12,6 +12,8 @@ export default [
                 payload: {
                     uid: "1934092",
                     username: "baigei",
+                    region: 'SA',
+                    createdAt: new Date().toLocaleDateString()
                 }
             }
         }

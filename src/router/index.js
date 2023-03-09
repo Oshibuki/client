@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import useUserStore from '@/stores/user'
 import NProgress from 'nprogress' // Progress 进度条
 import 'nprogress/nprogress.css'// Progress 进度条样式
+import '@/assets/css/customNprogress.css'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),

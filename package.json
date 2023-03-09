@@ -26,6 +26,7 @@
         "nprogress": "^0.2.0",
         "pinia": "^2.0.32",
         "pinia-plugin-persistedstate": "^3.1.0",
+        "socket.io-client": "^4.6.1",
         "tempusdominus-core": "5.19.3",
         "tooltipster": "^4.2.8",
         "tooltipster-scrollabletip": "^1.0.0",

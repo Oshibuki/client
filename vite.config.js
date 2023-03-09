@@ -3,11 +3,9 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import inject from "@rollup/plugin-inject";
 import { viteMockServe } from 'vite-plugin-mock'
-// import Icons from 'unplugin-icons/vite'
-// import AutoImport from 'unplugin-auto-import/vite'
-// import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import IconsResolver from 'unplugin-icons/resolver'
+import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+// import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 
 
@@ -31,7 +29,29 @@ export default defineConfig(() => {
                 prodEnabled: prodEnabled, // 生产打包开关
                 // 这样可以控制关闭mock的时候不让mock打包到最终代码内
             }),
-        ],
+            AutoImport({
+                // targets to transform
+                include: [
+                    /\.[tj]sx?$/,
+                    /\.vue$/,
+                    /\.vue\?vue/,
+                    /\.md$/,
+                ],
+
+                // global imports to register
+                imports: [
+                    // 插件预设支持导入的api
+                    'vue',
+                    'vue-router',
+                    'pinia'
+                    // 自定义导入的api
+                ],
+                resolvers: [],
+            }),
+            Components({
+                resolvers: [],
+              }),
+            ],
         resolve: {
             alias: {
                 '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -39,13 +59,16 @@ export default defineConfig(() => {
         },
         server: {
             proxy: {
-              '/api/user/login': {
-                target: 'http://localhost:3000',
-                changeOrigin: true,
-                secure: false,
-                ws:true
-              }
+                '/api': {
+                    target: 'http://localhost',
+                    changeOrigin: true,
+                    secure: false,
+                    // ws: true
+                }
             }
-          }
+        },
+        define:{
+            'process.env':{}
+        }
     }
 })

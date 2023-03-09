@@ -44,7 +44,7 @@
 <script setup>
 import { reactive, onMounted,onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import useUserStore from "../stores/user"
+import useUserStore from "../../stores/user"
 
 
 const router = useRouter()
@@ -60,19 +60,20 @@ const userStore = useUserStore()
 const onLogin = async () => {
     // 使用 actions，当作函数一样直接调用
     // login action 定义为了 async 函数，所以它返回一个 Promise
-    let result = await userStore.login(userData)
-    if(result.code==1){
+    let result = await userStore.login({username:userData.username,password:userData.password})
+    userData.code = result.code
+    if(userData.code==1){
         userData.loginStatus = "Authentication successful!"
-        userData.code = result.code
         setTimeout(()=>{
             router.push('/')
-        },1000)
+        },2000)
     }else {
-        userData.loginStatus = result.msg
+        userData.loginStatus = result.message
     }
 }
 
 onMounted(() => {
+    //取消adminlte main header和右侧sidebar空间
     document.body.classList.remove('control-sidebar-open')
 })
 onUnmounted(() => {

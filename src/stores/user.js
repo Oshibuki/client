@@ -1,6 +1,4 @@
-import axios from 'axios'
-axios.defaults.withCredentials = true
-
+import axios from '../utils/httpClient'
 import { defineStore } from 'pinia'
 
 // 创建 store
@@ -9,11 +7,23 @@ const useUserStore = defineStore('user', {
     persist: {
         key: "USER",
         storage: sessionStorage,
-        paths: ["username","uid"]
-      },
+        // paths: ["username", "uid"]
+    },
     state: () => ({
-        username: '',
-        uid:null
+        username: null,
+        uid: null,
+        region: null,
+        createAt:null,
+        banned:false,
+        banStart:null,
+        banEnd:null,
+        banReason:null,
+        mainClass:null,
+        isAdmin:false,
+        isHeadAdmin:false,
+        socket:null,
+        socketConnected:false,
+        chatList:[]
     }),
 
     // 定义 getters，等同于组件的计算属性
@@ -28,12 +38,22 @@ const useUserStore = defineStore('user', {
         async login(userData) {
             const result = await axios.post('/api/user/login', userData)
             let data = result.data
-            let {username,uid} = data.payload
-            if(data.code==1){
-                this.username= username
+            if (data.code == 1) {
+                let { uid, username, region, createAt, banned, banReason, banStart, banEnd, mainClass, isAdmin, isHeadAdmin } = data.payload
+                this.username = username
                 this.uid = uid
+                this.region = region
+                this.banned = banned
+                this.banReason = banReason
+                this.banStart = banStart
+                this.banEnd = banEnd
+                this.mainClass = mainClass
+                this.isAdmin = isAdmin
+                this.isHeadAdmin = isHeadAdmin
+                this.createAt = createAt
+                
             }
-            return result.data
+            return data
         },
         // 异步 action，一般用来处理异步逻辑
         async signUp(userData) {
@@ -43,8 +63,13 @@ const useUserStore = defineStore('user', {
         // 异步 action，一般用来处理异步逻辑
         async logout() {
             await axios.post('/api/user/logout')
-            this.uid=null
-            this.username=null
+            this.uid = null
+            this.username = null
+            this.region = null
+            this.createdAt = null
+            this.socket.disconnect()
+            this.chatList = []
+            this.socketConnected = false
         },
     }
 })
