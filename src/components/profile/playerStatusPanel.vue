@@ -71,8 +71,8 @@
 </template>
 
 <script setup>
-import usePlayerStatusStore from '../stores/playerStatus';
-import useUserStore from '../stores/user';
+import usePlayerStatusStore from '@/stores/playerStatus';
+import useUserStore from '@/stores/user';
 import { onMounted } from 'vue';
 
 const playerStore = usePlayerStatusStore()

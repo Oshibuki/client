@@ -68,9 +68,9 @@
 </template>
 <script setup>
 import useUserStore from '../stores/user';
-import PlayerStatusPanel from "../components/playerStatusPanel.vue"
-import EditProfilePanel from "../components/editProfilePanel.vue"
-import SeasonStatusPanel from "../components/seasonStatusPanel.vue"
+import PlayerStatusPanel from "../components/profile/playerStatusPanel.vue"
+import EditProfilePanel from "../components/profile/editProfilePanel.vue"
+import SeasonStatusPanel from "../components/profile/seasonStatusPanel.vue"
 import { reactive } from 'vue';
 
 const userStore = useUserStore()

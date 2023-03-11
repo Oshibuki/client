@@ -63,13 +63,19 @@ const useUserStore = defineStore('user', {
         // 异步 action，一般用来处理异步逻辑
         async logout() {
             await axios.post('/api/user/logout')
-            this.uid = null
-            this.username = null
-            this.region = null
-            this.createdAt = null
+            this.uid= null,
+            this.region= null,
+            this.createAt=null,
+            this.banned=false,
+            this.banStart=null,
+            this.banEnd=null,
+            this.banReason=null,
+            this.mainClass=null,
+            this.isAdmin=false,
+            this.isHeadAdmin=false,
             this.socket.disconnect()
-            this.chatList = []
-            this.socketConnected = false
+            this.socketConnected=false,
+            this.chatList=[]
         },
     }
 })

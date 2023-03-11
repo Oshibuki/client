@@ -24,7 +24,7 @@
             </div>
             <div id="wbmm_chat_footer" class="box-footer bg-gray-darker" style="position: fixed; bottom: 0; width: 340px;">
                 <div class="input-group">
-                    <input required="true" type="text" name="message" placeholder="Type Message ..." class="form-control" v-model="chatData.chatMsg">
+                    <input required="true" type="text" name="message" placeholder="Type Message ..." class="form-control" v-model="chatData.chatMsg" @keyup.enter="onSubmitChat">
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-success btn-flat" @click.stop="onSubmitChat">Send</button>
                     </span>
@@ -38,9 +38,9 @@
 </template>
 <script setup>
 import { reactive } from 'vue'
-import useUserStore from "../stores/user"
-import useSeasonStore from '../stores/seasonStatus'
-import useSiteStatusStore from '../stores/siteStatus'
+import useUserStore from "@/stores/user"
+import useSeasonStore from '@/stores/seasonStatus'
+import useSiteStatusStore from '@/stores/siteStatus'
 
 
 const chatData = reactive({
@@ -52,6 +52,7 @@ const seasonStore = useSeasonStore()
 const siteStatusStore = useSiteStatusStore()
 
 const onSubmitChat = async () => {
+    if(chatData.chatMsg=="")return;
     const chatInfo = {msg:chatData.chatMsg,senderName:userStore.username,senderRank:seasonStore.BRank,timeStamp:new Date()}
     await userStore.socket.emit("chatMsg",chatInfo,()=>{
         chatData.chatMsg=""
@@ -60,5 +61,5 @@ const onSubmitChat = async () => {
 
 </script>
 <style lang="">
-  
+
 </style>

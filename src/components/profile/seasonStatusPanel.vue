@@ -6,14 +6,12 @@
             </span>
             <h3 class="box-title">Statistics - current season</h3>
             <div class="box-tools pull-right">
-                    
-                <label class="brown-bar btn btn-md btn-main btn-hover-white">
-                    <input type="radio" v-model="activeComponent" :value="GroupFightPanel"> Groupfighting
-                </label>
                 <label class="brown-bar ml-5 btn btn-md btn-main btn-hover-white">
                     <input type="radio" v-model="activeComponent" :value="BattlePanel"> Battle
                 </label>
-                
+                <label class="brown-bar btn btn-md btn-main btn-hover-white">
+                    <input type="radio" v-model="activeComponent" :value="GroupFightPanel"> Groupfighting
+                </label>
             </div>
         </div>
         <Transition name="fade" mode="out-in">
@@ -41,7 +39,7 @@ import GroupFightPanel from './groupfightPanel.vue'
 import BattlePanel from './battlePanel.vue'
 
 // use shallowRef to avoid component being deeply observed
-const activeComponent = shallowRef(GroupFightPanel)
+const activeComponent = shallowRef(BattlePanel)
 
 </script>
 

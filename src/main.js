@@ -42,6 +42,3 @@ import 'tooltipster-scrollabletip/tooltipster-scrollableTip.min.js'
 //确保adminlte导入在bootstrap后面
 import.meta.globEager(['./assets/css/*','!./assets/css/AdminLTE.css']);
 import './assets/css/AdminLTE.css'
-// //Carousel and utils
-// import './assets/js/carousel.js'
-// import './assets/js/util.js'

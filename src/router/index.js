@@ -20,81 +20,81 @@ const router = createRouter({
                 {
                     path: '/home', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/headerPanel.vue'),
-                        LeftSidebar: () => import('../components/sidebarLogged.vue'),
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
                         Main: () => import('../views/HomePage.vue'),
-                        MainFooter: () => import('../components/footerPanel.vue'),
-                        RightSidebar: () => import('../components/chatPanel.vue')
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
                     }
                 },
                 {
                     path: '/profile', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/headerPanel.vue'),
-                        LeftSidebar: () => import('../components/sidebarLogged.vue'),
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
                         Main: () => import('../views/ProfilePage.vue'),
-                        MainFooter: () => import('../components/footerPanel.vue'),
-                        RightSidebar: () => import('../components/chatPanel.vue')
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
                     }
                 },
                 {
                     path: '/play', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/headerPanel.vue'),
-                        LeftSidebar: () => import('../components/sidebarLogged.vue'),
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
                         Main: () => import('../views/PlayPage.vue'),
-                        MainFooter: () => import('../components/footerPanel.vue'),
-                        RightSidebar: () => import('../components/chatPanel.vue')
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
                     }
                 },
                 {
                     path: '/friends', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/headerPanel.vue'),
-                        LeftSidebar: () => import('../components/sidebarLogged.vue'),
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
                         Main: () => import('../views/FriendsPage.vue'),
-                        MainFooter: () => import('../components/footerPanel.vue'),
-                        RightSidebar: () => import('../components/chatPanel.vue')
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
                     }
                 },
                 {
                     path: '/leaderBoards', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/headerPanel.vue'),
-                        LeftSidebar: () => import('../components/sidebarLogged.vue'),
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
                         Main: () => import('../views/LeaderBoardsPage.vue'),
-                        MainFooter: () => import('../components/footerPanel.vue'),
-                        RightSidebar: () => import('../components/chatPanel.vue')
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
                     }
                 },
                 {
                     path: '/matchHistory', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/headerPanel.vue'),
-                        LeftSidebar: () => import('../components/sidebarLogged.vue'),
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
                         Main: () => import('../views/MatchHistoryPage.vue'),
-                        MainFooter: () => import('../components/footerPanel.vue'),
-                        RightSidebar: () => import('../components/chatPanel.vue')
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
                     }
                 },
                 {
                     path: '/about', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/headerPanel.vue'),
-                        LeftSidebar: () => import('../components/sidebarLogged.vue'),
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
                         Main: () => import('../views/AboutPage.vue'),
-                        MainFooter: () => import('../components/footerPanel.vue'),
-                        RightSidebar: () => import('../components/chatPanel.vue')
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
                     }
                 },
                 {
                     path: '/rules', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/headerPanel.vue'),
-                        LeftSidebar: () => import('../components/sidebarLogged.vue'),
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
                         Main: () => import('../views/RulesPage.vue'),
-                        MainFooter: () => import('../components/footerPanel.vue'),
-                        RightSidebar: () => import('../components/chatPanel.vue')
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
                     }
                 },
             ]
@@ -107,10 +107,10 @@ const router = createRouter({
                 {
                     path: '', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/header.vue'),
-                        LeftSidebar: () => import('../components/sidebarUnlogged.vue'),
-                        LoginForm: () => import('../components/loginForm.vue'),
-                        MainFooter: () => import('../components/footerPanel.vue')
+                        Header: () => import('../components/common/header.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarUnlogged.vue'),
+                        LoginForm: () => import('../components/login/loginForm.vue'),
+                        MainFooter: () => import('../components/common/footerPanel.vue')
                     }
                 }
             ]
@@ -123,10 +123,10 @@ const router = createRouter({
                 {
                     path: '', // 嵌套路由里默认是哪个网页
                     components: {
-                        Header: () => import('../components/header.vue'),
-                        LeftSidebar: () => import('../components/sidebarUnlogged.vue'),
-                        RegisterForm: () => import('../components/registration.vue'),
-                        Footer: () => import('../components/footerPanel.vue')
+                        Header: () => import('../components/common/header.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarUnlogged.vue'),
+                        RegisterForm: () => import('../components/register/registration.vue'),
+                        Footer: () => import('../components/common/footerPanel.vue')
                     }
                 }
             ]

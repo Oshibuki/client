@@ -8,7 +8,7 @@
   <div class="login-box">
    
    <div class="login-logo">
-    <img src="../assets/img/logo_large.png" class="img-fluid" alt="WBMM Logo">
+    <img src="@/assets/img/logo_large.png" class="img-fluid" alt="WBMM Logo">
    </div>
 
    <div class="login-box-body bg-default-light">
@@ -44,7 +44,7 @@
 <script setup>
 import { reactive, onMounted,onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import useUserStore from "../../stores/user"
+import useUserStore from "@/stores/user"
 
 
 const router = useRouter()

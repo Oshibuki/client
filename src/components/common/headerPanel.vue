@@ -5,10 +5,10 @@
 <!-- Logo -->
 <a href="https://warbandmatchmaking.com/" class="logo">
 <!-- mini logo for sidebar mini 50x50 pixels -->
-<span class="logo-mini"><img src="../assets/img/small_logo.png" class="img-fluid" alt="wbmm_na"></span>
+<span class="logo-mini"><img src="@/assets/img/small_logo.png" class="img-fluid" alt="wbmm_na"></span>
 <!-- logo for regular state and mobile devices -->
 <span class="logo-lg">
-    <img src="../assets/img/logo.png" class="img-fluid" alt="WBMM Logo">
+    <img src="@/assets/img/logo.png" class="img-fluid" alt="WBMM Logo">
 </span>
 </a>
 
@@ -43,47 +43,14 @@
 
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle">
-                <img src="../assets/img/wbmm_icon.png" class="user-image">
-            <span id="wbmm_lobby_status" class="hidden-xs">NOT IN LOBBY</span>          </a>
+                <img src="@/assets/img/wbmm_icon.png" class="user-image">
+            <span id="wbmm_lobby_status" class="hidden-xs">NOT IN LOBBY</span></a>
         </li>
 
-        
-        <!-- Region -->
-        <li class="dropdown messages-menu user-menu bg-gray-dark">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="../assets/img/east_asia.png" class="user-image">
-                <span class="hidden-xs">East Asia</span>
-            </a>
-            
-            <ul class="dropdown-menu">
-                <li class="header"><h5>Select the region:</h5></li>
-                <li>
-                    <ul class="menu">
-                        <li>
-                            <a id="wbmm_region_eu" href="#">
-                                <div class="pull-left">
-                                    <img src="../assets/img/europe.png" width="48" height="48">
-                                </div>
-                                <p style="font-size:20px">Europe</p>
-                            </a>
-                            
-                            <a id="wbmm_region_na" href="#">
-                                <div class="pull-left">
-                                    <img src="../assets/img/north_america.png" width="48" height="48">
-                                </div>
-                                <p style="font-size:20px">North America</p>
-                            </a>
 
-                            
-                            
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
 
         <!-- Notifications -->
-                            <li id="notifications_menu" class="dropdown messages-menu bg-gray-dark">
+            <li id="notifications_menu" class="dropdown messages-menu bg-gray-dark">
 
                 <!-- Menu toggle button -->
                 <a href="#" id="notifications_toggle" class="dropdown-toggle" data-toggle="dropdown">

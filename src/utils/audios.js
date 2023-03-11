@@ -21,14 +21,6 @@ chimeSound.preLoad = true;
 chimeSound.controls = false;
 
 var acceptSound = document.createElement("audio");
-var acceptSoundSrc = [
-    "src/assets/sounds/accept_1.mp3",
-    "src/assets/sounds/accept_2.mp3",
-    "src/assets/sounds/accept_3.mp3",
-    "src/assets/sounds/accept_4.mp3",
-    "src/assets/sounds/accept_5.mp3",
-    "src/assets/sounds/accept_6.mp3",
-];
 acceptSound.src = "src/assets/sounds/accept_1.mp3";
 acceptSound.volume = 0.25;
 acceptSound.autoPlay = false;
@@ -36,13 +28,6 @@ acceptSound.preLoad = true;
 acceptSound.controls = false;
 
 var captainSound = document.createElement("audio");
-var captainSoundSrc = [
-    "src/assets/sounds/captain_1.mp3",
-    "src/assets/sounds/captain_2.mp3",
-    "src/assets/sounds/captain_3.mp3",
-    "src/assets/sounds/captain_4.mp3",
-    "src/assets/sounds/captain_5.mp3",
-];
 captainSound.src = "src/assets/sounds/captain_1.mp3";
 captainSound.volume = 0.25;
 captainSound.autoPlay = false;
@@ -50,10 +35,6 @@ captainSound.preLoad = true;
 captainSound.controls = false;
 
 var achievementSound = document.createElement("audio");
-var achievementSoundSrc = [
-    "src/assets/sounds/achievement_1.mp3",
-    "src/assets/sounds/achievement_2.mp3",
-];
 achievementSound.src = "src/assets/sounds/achievement_1.mp3";
 achievementSound.volume = 0.10;
 achievementSound.autoPlay = false;

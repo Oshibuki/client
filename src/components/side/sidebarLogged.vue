@@ -51,11 +51,11 @@
 </template>
   
 <script setup>
-import useUserStore from "../stores/user"
-import initSocket from '../utils/socket'
-import useSeasonStore from '../stores/seasonStatus'
+import useUserStore from "@/stores/user"
+import initSocket from '@/utils/socket'
+import useSeasonStore from '@/stores/seasonStatus'
 import { onMounted } from "vue"
-import getRankImg from '../utils/getRankImg'
+import getRankImg from '@/utils/getRankImg'
 
 
 const userStore = useUserStore()

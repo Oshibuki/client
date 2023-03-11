@@ -20,7 +20,11 @@ body,
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    scrollbar-width: none;
 
+}
+::-webkit-scrollbar {
+    display: none;
 }
 .msgSuccess{color:#00A65A}
 .msgFailure {color:#DD4B39}

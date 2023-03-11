@@ -117,9 +117,9 @@
 </template>
 
 <script setup>
-import getRankImg from '../utils/getRankImg'
-import useSeasonStatusStore from '../stores/seasonStatus.js';
-import useUserStore from '../stores/user.js';
+import getRankImg from '@/utils/getRankImg'
+import useSeasonStatusStore from '@/stores/seasonStatus.js';
+import useUserStore from '@/stores/user.js';
 import { onMounted,computed } from 'vue';
 const seasonStatusStore = useSeasonStatusStore()
 const userStore = useUserStore()

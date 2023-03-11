@@ -1,6 +1,7 @@
 import { io } from "socket.io-client";
-import {clickSound} from './audios.js'
+import {clickSound,connectedSound} from './audios.js'
 import useSiteStatusStore from '../stores/siteStatus.js'
+import router from '@/router'
 
 // "undefined" means the URL will be computed from the `window.location` object
 
@@ -18,6 +19,7 @@ export default function initSocket(store){
 
     socket.on("connect", () => { 
         store.socketConnected = true
+        connectedSound.play()
     });
     
     socket.on("disconnect", () => {
@@ -32,6 +34,12 @@ export default function initSocket(store){
     socket.on("currentCount",(data)=>{
         siteStatusStore.updateOnlineUsers(data)
     })
+
+    socket.on("squeezeOut", () => {
+        store.logout()
+        alert("账户在其它地方登陆，会话已断开！")
+        router.push('/login')
+      })
     
 
     store.socket = socket

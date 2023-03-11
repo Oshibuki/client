@@ -139,7 +139,7 @@
 </section>
 </template>
 <script>
-import carousel from '../components/myCarousel.vue'
+import carousel from '../components/common/myCarousel.vue'
 export default {
     components:{
         carousel

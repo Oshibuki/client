@@ -214,7 +214,7 @@ questions regarding outstanding changes.</p>
 
 </template>
 <script setup>
-import RegionStatus from '../components/regionStatus.vue'
+import RegionStatus from '../components/common/regionStatus.vue'
 import useUserStore from '../stores/user';
 
 const userStore = useUserStore()

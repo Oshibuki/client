@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import modal from './modal.vue'
+import modal from '@/components/common/modal.vue'
 import commonRules from './commonRulesContent.vue'
 
 

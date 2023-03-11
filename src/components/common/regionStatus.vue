@@ -11,8 +11,8 @@
 
 <script setup>
 import { onMounted } from "vue";
-import useRegionStatusStore from "../stores/regionStatus"
-import useUserStore from "../stores/user"
+import useRegionStatusStore from "@/stores/regionStatus"
+import useUserStore from "@/stores/user"
 
 // 实例化 store
 const regionStore = useRegionStatusStore()

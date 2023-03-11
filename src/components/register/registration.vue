@@ -84,9 +84,9 @@
 <script setup>
 import { reactive, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import PolicyPanel from './policyPanel.vue'
-import RulesPanel from './commonRulesPanel.vue'
-import useUserStore from "../stores/user"
+import PolicyPanel from '@/components/rule/policyPanel.vue'
+import RulesPanel from '@/components/rule/commonRulesPanel.vue'
+import useUserStore from "@/stores/user"
 
 const userData = reactive({
     username: 'justice',
