@@ -12,6 +12,10 @@
                     <div class="box-tools pull-right">
                         <span id="chat_users" data-toggle="tooltip" title="Chat Users" class="badge bg-brown">{{ siteStatusStore.onLineUsers }}
                             <small>USERS</small></span>
+                            <button id="wbmm_chat_mute" class="btn btn-col btn-box-tool" @click.stop="siteStatusStore.changeMuted" data-toggle="tooltip" title="Unmute sound" data-widget="chat-pane-toggle">
+                                <i class="fa fa-volume-up" style="color:#00A65A;" v-if="!siteStatusStore.muted"></i>
+                                <i class="fa fa-volume-off" style="color:#DD4B39;" v-else></i>
+                            </button>
                     </div>
                 </div>
             </div>
@@ -38,6 +42,7 @@
 </template>
 <script setup>
 import { reactive } from 'vue'
+import chatMsg from './chatMsg.vue'
 import useUserStore from "@/stores/user"
 import useSeasonStore from '@/stores/seasonStatus'
 import useSiteStatusStore from '@/stores/siteStatus'
@@ -57,6 +62,7 @@ const onSubmitChat = async () => {
     await userStore.socket.emit("chatMsg",chatInfo,()=>{
         chatData.chatMsg=""
     })
+    console.log(userStore.chatList)
 }
 
 </script>

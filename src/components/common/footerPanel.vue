@@ -25,6 +25,8 @@ import PolicyPanel from '@/components/rule/policyPanel.vue'
 import RulesPanel from '@/components/rule/commonRulesPanel.vue'
 
 </script>
-<style lang="">
-    
+<style lang="scss">
+.main-footer {
+    margin-left:0;
+}
 </style>

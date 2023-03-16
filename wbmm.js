@@ -134,7 +134,7 @@ $(function () {
 
                         // reset the counter for missed pings
                         missed_pings = 0;
-                        return;
+                        return;    
                     }
 
 

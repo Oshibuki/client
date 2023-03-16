@@ -26,17 +26,6 @@
 <div class="navbar-custom-menu">
 
     <ul class="nav navbar-nav">
-
-        <!-- Announcement live messages-->
-
-            <li class="user-menu">
-                <a href="#" class="dropdown-toggle no-hover" data-toggle="dropdown">
-                    <div class="livemsg hidden-xs"></div>
-                </a>
-            </li>
-
-
-
         
         <!-- Queue -->
         <li id="wbmm_play" class="user-menu bg-brown">

@@ -2,7 +2,7 @@
     <div id="profile_stats" class="box-body">
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="info-box bg-default-light">
                     <span class="info-box-icon">
                         <img :src="rankImgUrl" style="margin-bottom:12px" width="64" height="64">
@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="info-box bg-default-light">
                     <span class="info-box-icon">
                         <i class="fas fa-shield-alt" style="color:#fff"></i>
@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="info-box bg-default-light">
                     <span class="info-box-icon bg-green">
                         <i class="far fa-flag" style="color:#fff"></i>
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="info-box bg-default-light">
                     <span class="info-box-icon bg-red">
                         <i class="fas fa-flag" style="color:#fff"></i>
@@ -58,7 +58,7 @@
         </div>
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="info-box bg-default-light">
                     <span class="info-box-icon">
                         <i class="fas fa-award" style="color:#fff"></i>
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="info-box bg-default-light">
                     <span class="info-box-icon bg-green">
                         <i class="fas fa-fist-raised" style="color:#fff"></i>
@@ -85,7 +85,7 @@
             </div>
 
 
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="info-box bg-default-light">
                     <span class="info-box-icon bg-yellow">
                         <i class="fas fa-skull-crossbones" style="color:#fff"></i>
@@ -99,7 +99,7 @@
             </div>
 
 
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="info-box bg-default-light">
                     <span class="info-box-icon bg-red">
                         <i class="fas fa-skull-crossbones" style="color:#fff"></i>

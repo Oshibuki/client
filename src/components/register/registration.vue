@@ -3,7 +3,7 @@
         <div class="row">
             <div class="register-box">
                 <div class="register-logo">
-                    <a><img src="../assets/img/logo_large.png" alt="WBMM Logo"></a>
+                    <a><img src="../../assets/img/logo_large.png" alt="WBMM Logo"></a>
                 </div>
 
                 <div class="register-box-body">

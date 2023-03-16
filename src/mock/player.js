@@ -10,25 +10,25 @@ export default [
             return {
                 code: 1,
                 payload: {
-                    GMMR:12,
-                    MMR:12,
-                    PresetMMR:12,
-                    BWins:12,
-                    GWins:12,
-                    BLosses:12,
-                    GLosses:12,
-                    BKills:12,
-                    BTeamkills:12,
-                    BDeaths:12,
-                    BTotalMatches:12,
-                    GKills:12,
-                    GTeamkills:12,
-                    GDeaths:12,
-                    GTotalMatches:12,
-                    TotalDamage:0
+                    gmmr:0,
+                    mmr:0,
+                    bwins:0,
+                    gwins:0,
+                    glosses:0,
+                    blosses:0,
+                    bdraws:0,
+                    gdraws:0,
+                    bkills:0,
+                    bteamkills:0,
+                    bdeaths:0,
+                    gkills:0,
+                    gteamkills:0,
+                    gdeaths:0,
+                    bTotalDamage:0,
+                    gTotalDamage:0
                 }
             }
         }
-    },
+    }:0,
 
 ]

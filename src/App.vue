@@ -28,4 +28,11 @@ body,
 }
 .msgSuccess{color:#00A65A}
 .msgFailure {color:#DD4B39}
+
+
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
 </style>

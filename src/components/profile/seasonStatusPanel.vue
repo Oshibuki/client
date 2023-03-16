@@ -53,11 +53,4 @@ const activeComponent = shallowRef(BattlePanel)
 .fade-leave-to {
   opacity: 0;
 }
-
-input[type="radio"] {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
 </style>

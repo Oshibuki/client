@@ -6,6 +6,11 @@ import { defineStore } from 'pinia'
 
 // 创建 store
 const useSeasonStatusStore = defineStore('seasonStatus', {
+    // persist: {
+    //     key: "Season",
+    //     storage: sessionStorage,
+    //     // paths: ["username", "uid"]
+    // },
     state: () => ({
         NameChanged: false,
         GMMR: 0,

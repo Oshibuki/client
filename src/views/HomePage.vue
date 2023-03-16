@@ -11,15 +11,15 @@
      </div>
      <div class="text-right col-md-4">
         <Suspense>
-        <template #default>
-            <region-status></region-status>
-        </template>
-        <template #fallback>
-            <div>
-                <h5>数据加载中……</h5>
-            </div>
-        </template>
-    </Suspense>
+            <template #default>
+                <region-status></region-status>
+            </template>
+            <template #fallback>
+                <div>
+                    <h5>数据加载中……</h5>
+                </div>
+            </template>
+        </Suspense>
      </div>
     </div>
    </div>

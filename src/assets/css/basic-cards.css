@@ -11,6 +11,7 @@
   position: relative;
   transition: 0.4s;
   cursor: pointer;
+  vertical-align: top;
 }
 .card__caption {
   color: #fff;

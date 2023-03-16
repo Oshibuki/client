@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import useUserStore from '@/stores/user'
+import useMatchStatusStore from '@/stores/user'
 import NProgress from 'nprogress' // Progress 进度条
 import 'nprogress/nprogress.css'// Progress 进度条样式
 import '@/assets/css/customNprogress.css'
@@ -15,17 +16,14 @@ const router = createRouter({
             children: [// 开始嵌套路由，这下面的所有路由都是Main路由的子路由
                 {
                     path: '/', // 嵌套路由里默认是哪个网页
-                    redirect: '/home'
-                },
-                {
-                    path: '/home', // 嵌套路由里默认是哪个网页
                     components: {
                         Header: () => import('../components/common/headerPanel.vue'),
                         LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
                         Main: () => import('../views/HomePage.vue'),
                         MainFooter: () => import('../components/common/footerPanel.vue'),
                         RightSidebar: () => import('../components/chat/chatPanel.vue')
-                    }
+                    },
+                    alias: '/home'
                 },
                 {
                     path: '/profile', // 嵌套路由里默认是哪个网页
@@ -45,7 +43,22 @@ const router = createRouter({
                         Main: () => import('../views/PlayPage.vue'),
                         MainFooter: () => import('../components/common/footerPanel.vue'),
                         RightSidebar: () => import('../components/chat/chatPanel.vue')
-                    }
+                    },
+                    children: [
+                        {
+                            path: '/selectmode',
+                            alias: '',
+                            components: {
+                                currentStep: () => import('../components/match/selectMode.vue')
+                            },
+                        },
+                        {
+                            path: '/waitlobby',
+                            components: {
+                                currentStep: () => import('../components/match/waitLobby.vue')
+                            }
+                        }
+                    ]
                 },
                 {
                     path: '/friends', // 嵌套路由里默认是哪个网页
@@ -132,28 +145,36 @@ const router = createRouter({
             ]
         },
         {
-            path: '/*', // 注意，这里不是嵌套路由了，这是为了设置404页面，一定要放在最后面，这样当服务器找不到页面的时候就会全部跳转到404
-            name: '404',
-            component: () => import('../views/404.vue')
+            path: '/404',
+            name: 'NotFound',
+            component: () => import('../views/NotFound.vue'),
+        },
+        {
+            path: '/:catchAll(.*)',
+            redirect: '/404'
         }
     ]
 })
 
-const whiteList = ['/login', '/register'];
+let store = null
+const whiteList = ['/login', '/register', '/404'];
 router.beforeEach((to, from, next) => {
     NProgress.start();
 
     if (whiteList.indexOf(to.path) !== -1) {
         next();
     } else {
-        const userStore = useUserStore()
-        if (userStore.isLoggedIn) {
-            next();
-            NProgress.done()
-        } else {
+        if (store === null) {
+            store = useUserStore();
+        }
+        if (!store.isLoggedIn) {
             next({ path: '/login' });
             NProgress.done()
+        } else {
+            next();
+            NProgress.done()
         }
+          
     }
 })
 

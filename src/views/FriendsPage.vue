@@ -174,7 +174,7 @@
               </div>
             </form></td></tr><tr>
               <td class="bg-gray-dark" style="width:64px;vertical-align:middle;">
-                <img src="../assets/img/ranks/Master Knight.png" width="64" height="64">
+                <img src="../assets/img/ranks/MasterKnight.png" width="64" height="64">
                 <p class="text-center"><small>Master Knight</small></p>
               </td><td>
               <p style="margin: 0"><b>XueNai</b></p>  <span class="text-red" style="font-size: 14px; font-weight:550;">[Offline]</span>

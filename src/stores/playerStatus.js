@@ -6,6 +6,11 @@ import { defineStore } from 'pinia'
 
 // 创建 store
 const usePlayerStatusStore = defineStore('playerStatus', {
+    // persist: {
+    //     key: "Player",
+    //     storage: sessionStorage,
+    //     // paths: ["username", "uid"]
+    // },
     state: () => ({
         GMMR: 0,
         MMR: 0,

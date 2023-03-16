@@ -9,7 +9,7 @@ export default function(MMR) {
     } else if (MMR >= 1400 && MMR < 1600) {
         Result = 'Knight';
     } else if (MMR >= 1600 && MMR < 2000) {
-        Result = 'Master Knight';
+        Result = 'MasterKnight';
     } else if (MMR >= 2000 && MMR < 2400) {
         Result = 'Lord';
     } else if (MMR >= 2400 && MMR < 3000) {

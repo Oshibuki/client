@@ -6,7 +6,7 @@
 
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img :src="getRankImg(seasonStore.BRank)" class="user-image" alt="User Image">
+                    <img :src="getRankImg(seasonStore.BRank)" class="user-image" :alt="seasonStore.BRank">
                 </div>
                 <div class="pull-left info">
                     <p><b>{{ userStore.username }}</b></p>
@@ -74,5 +74,11 @@ async function onLogout() {
 </script>
   
 <style>
+@media (min-width: 768px) {
+  .control-sidebar-open .main-footer {
+    margin-right:0;
+    }
+}
+
 </style>
   

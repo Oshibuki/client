@@ -235,7 +235,7 @@
           <input type="hidden" name="playeruid" value="2775553">
           <td class="text-center"><span>#21</span></td>
           <td class="text-center"><span>tiantangshejing</span></td>
-          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/Master Knight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
+          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/MasterKnight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
           <td class="text-center"><span class="text-yellow">1916</span></td>
           <td class="text-center"><span class="text-green">109</span></td>
           <td class="text-center"><span class="text-red">127</span></td>
@@ -245,7 +245,7 @@
           <input type="hidden" name="playeruid" value="1957404">
           <td class="text-center"><span>#22</span></td>
           <td class="text-center"><span>UN_happy</span></td>
-          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/Master Knight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
+          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/MasterKnight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
           <td class="text-center"><span class="text-yellow">1909</span></td>
           <td class="text-center"><span class="text-green">107</span></td>
           <td class="text-center"><span class="text-red">125</span></td>
@@ -255,7 +255,7 @@
           <input type="hidden" name="playeruid" value="4641158">
           <td class="text-center"><span>#23</span></td>
           <td class="text-center"><span>K_IRVING_11</span></td>
-          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/Master Knight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
+          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/MasterKnight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
           <td class="text-center"><span class="text-yellow">1820</span></td>
           <td class="text-center"><span class="text-green">42</span></td>
           <td class="text-center"><span class="text-red">39</span></td>
@@ -265,7 +265,7 @@
           <input type="hidden" name="playeruid" value="3529276">
           <td class="text-center"><span>#24</span></td>
           <td class="text-center"><span>De-Bruyne</span></td>
-          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/Master Knight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
+          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/MasterKnight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
           <td class="text-center"><span class="text-yellow">1775</span></td>
           <td class="text-center"><span class="text-green">55</span></td>
           <td class="text-center"><span class="text-red">52</span></td>
@@ -275,7 +275,7 @@
           <input type="hidden" name="playeruid" value="3538263">
           <td class="text-center"><span>#25</span></td>
           <td class="text-center"><span>MonkeyBeater</span></td>
-          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/Master Knight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
+          <td class="text-center" style="vertical-align:middle;><span class=" label="" label-primary=""><img src="../assets/img/ranks/MasterKnight.png" alt="Rank Image" width="28" height="28"> Master Knight</td>
           <td class="text-center"><span class="text-yellow">1773</span></td>
           <td class="text-center"><span class="text-green">23</span></td>
           <td class="text-center"><span class="text-red">16</span></td>

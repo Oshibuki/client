@@ -4,11 +4,11 @@ import { defineStore } from 'pinia'
 // 创建 store
 const useUserStore = defineStore('user', {
     // 定义状态：一个函数，返回一个对象
-    persist: {
-        key: "USER",
-        storage: sessionStorage,
-        // paths: ["username", "uid"]
-    },
+    // persist: {
+    //     key: "USER",
+    //     storage: sessionStorage,
+    //     // paths: ["username", "uid"]
+    // },
     state: () => ({
         username: null,
         uid: null,
@@ -23,7 +23,7 @@ const useUserStore = defineStore('user', {
         isHeadAdmin:false,
         socket:null,
         socketConnected:false,
-        chatList:[]
+        chatList:[],
     }),
 
     // 定义 getters，等同于组件的计算属性
@@ -51,7 +51,6 @@ const useUserStore = defineStore('user', {
                 this.isAdmin = isAdmin
                 this.isHeadAdmin = isHeadAdmin
                 this.createAt = createAt
-                
             }
             return data
         },
@@ -74,9 +73,28 @@ const useUserStore = defineStore('user', {
             this.isAdmin=false,
             this.isHeadAdmin=false,
             this.socket.disconnect()
-            this.socketConnected=false,
+            this.socketConnected = false
             this.chatList=[]
         },
+        async updateStatus() {
+            const result = await axios.post('/api/user/status',this.uid)
+            let data = result.data
+            if (data.code == 1) {
+                let { uid, username, region, createAt, banned, banReason, banStart, banEnd, mainClass, isAdmin, isHeadAdmin } = data.payload
+                this.username = username
+                this.uid = uid
+                this.region = region
+                this.banned = banned
+                this.banReason = banReason
+                this.banStart = banStart
+                this.banEnd = banEnd
+                this.mainClass = mainClass
+                this.isAdmin = isAdmin
+                this.isHeadAdmin = isHeadAdmin
+                this.createAt = createAt
+            }
+            return data
+        }
     }
 })
 

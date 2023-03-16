@@ -22,6 +22,8 @@ specifiers:
   font-awesome: ^4.7.0
   jquery: ^3.4.0
   jquery-ui-dist: ^1.13.2
+  lodash: ^4.17.21
+  lodash-es: ^4.17.21
   mockjs: ^1.1.0
   nprogress: ^0.2.0
   pinia: ^2.0.32
@@ -58,6 +60,8 @@ dependencies:
   font-awesome: 4.7.0
   jquery: 3.4.0
   jquery-ui-dist: 1.13.2
+  lodash: 4.17.21
+  lodash-es: 4.17.21
   nprogress: 0.2.0
   pinia: 2.0.32_vue@3.2.47
   pinia-plugin-persistedstate: 3.1.0_pinia@2.0.32
