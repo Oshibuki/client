@@ -6,7 +6,7 @@
                 <div class="box box-primary bg-default-light">
 
                     <div class="box-header with-border bg-brown">
-                        <h3 class="box-title"><b>Lobby - {{ matchStatusStore.lobbyID }}</b></h3>
+                        <h3 class="box-title"><b>Lobby - {{ matchStatusStore.lobbyInfo.lobbyID }}</b></h3>
                         <!-- <div class="box-tools pull-right">
               <span class="label text-white">Total friends: 0</span>
             </div> -->

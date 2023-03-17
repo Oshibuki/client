@@ -29,6 +29,6 @@ export default [
                 }
             }
         }
-    }:0,
+    }
 
 ]

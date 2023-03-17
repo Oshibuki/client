@@ -58,7 +58,7 @@ const siteStatusStore = useSiteStatusStore()
 
 const onSubmitChat = async () => {
     if(chatData.chatMsg=="")return;
-    const chatInfo = {msg:chatData.chatMsg,senderName:userStore.username,senderRank:seasonStore.BRank,timeStamp:new Date()}
+    const chatInfo = {msg:chatData.chatMsg,senderName:userStore.username,senderRank:seasonStore.BRank,timeStamp:new Date().toLocaleDateString()}
     await userStore.socket.emit("chatMsg",chatInfo,()=>{
         chatData.chatMsg=""
     })

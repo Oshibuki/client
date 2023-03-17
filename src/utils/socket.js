@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
-import {clickSound,connectedSound} from './audios.js'
+import {clickSound,connectedSound,kickedSound} from './audios.js'
 import useSiteStatusStore from '../stores/siteStatus.js'
 import useMatchStatusStore from '../stores/match.js'
 import router from '@/router'
@@ -46,12 +46,18 @@ export default function initSocket(store){
         clickSound.play()
     });
 
+    socket.on("playerkicked", (data) => {
+        store.chatList.push(data)
+        kickedSound.muted = siteStatusStore.muted
+        kickedSound.play()
+    });
+
     socket.on("currentCount",(data)=>{
         siteStatusStore.updateStatus(data)
     })
 
-    socket.on("canjoinlobby", (gamemode) => {
-        matchStatusStore.updateLobbyInfo(gamemode)
+    socket.on("canjoinlobby", (data) => {
+        matchStatusStore.updateLobbyInfo(data)
         router.push('/waitlobby')
     });
 
