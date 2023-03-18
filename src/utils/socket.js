@@ -37,7 +37,7 @@ export default function initSocket(store){
         connectedSound.muted = siteStatusStore.muted
         connectedSound.play()
         matchStatusStore.$reset()
-        router.push('/')
+        router.replace('/')
     });
 
     socket.on("chatMsg", (data) => {
@@ -58,6 +58,7 @@ export default function initSocket(store){
 
     socket.on("canjoinlobby", (data) => {
         matchStatusStore.updateLobbyInfo(data)
+        matchStatusStore.updateCurrentStep('waitlobby')
         router.push('/waitlobby')
     });
 
@@ -67,14 +68,21 @@ export default function initSocket(store){
 
     socket.on("canexitlobby", () => {
         matchStatusStore.$reset()
+        matchStatusStore.updateCurrentStep('selectmode')
         router.push('/play')
     });
 
-    socket.on("updatequeue", (players) => {
+    socket.on("updatequeue", ({lobbyPlayers,server}) => {
         matchStatusStore.$patch((state)=>{
-            state.currentLobby = players.sort((a,b)=>a.mmr>b.mmr)
+            state.currentLobby = lobbyPlayers.sort((a,b)=>a.mmr>b.mmr)
+            state.lobbyInfo = server
         })
     });
+
+    socket.on("updateReadyTimer", (data) => {
+        matchStatusStore.updateReadyTimer(data)
+    });
+
 
     socket.on("squeezeOut", () => {
         store.logout()

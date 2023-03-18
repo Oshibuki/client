@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import pinia from '@/stores/index'
 import useUserStore from '@/stores/user'
-import useMatchStatusStore from '@/stores/user'
+import useMatchStatusStore from '@/stores/match'
 import NProgress from 'nprogress' // Progress 进度条
 import 'nprogress/nprogress.css'// Progress 进度条样式
 import '@/assets/css/customNprogress.css'
@@ -44,21 +45,71 @@ const router = createRouter({
                         MainFooter: () => import('../components/common/footerPanel.vue'),
                         RightSidebar: () => import('../components/chat/chatPanel.vue')
                     },
-                    children: [
-                        {
-                            path: '/selectmode',
-                            alias: '',
-                            components: {
-                                currentStep: () => import('../components/match/selectMode.vue')
-                            },
-                        },
-                        {
-                            path: '/waitlobby',
-                            components: {
-                                currentStep: () => import('../components/match/waitLobby.vue')
-                            }
+                    beforeEnter:(to, from,next)=>{
+                        const matchStatusStore = useMatchStatusStore(pinia)
+                        console.log(matchStatusStore.currentStep)
+                        if(matchStatusStore.currentStep=="selectmode"){
+                            next({path:'/selectmode'})
+                        }else if(matchStatusStore.currentStep=="waitlobby"){
+                            next({path:'/waitlobby'})
+                        }else if(matchStatusStore.currentStep=="matchstarted"){
+                            next({path:'/matchstarted'})
+                        }else if(matchStatusStore.currentStep=="matchended"){
+                            next({path:'/matchended'})
+                        }else if(matchStatusStore.currentStep=="matchcanceled"){
+                            next({path:'/matchcanceled'})
                         }
-                    ]
+                    },
+                },
+                {
+                    path: '/selectmode', // 嵌套路由里默认是哪个网页
+                    components: {
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
+                        Main:() => import('../components/match/selectMode.vue'),
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
+                    }
+                },
+                {
+                    path: '/waitlobby', // 嵌套路由里默认是哪个网页
+                    components: {
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
+                        Main: () => import('../components/match/waitLobby.vue'),
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
+                    }
+                },
+                {
+                    path: '/matchstarted', // 嵌套路由里默认是哪个网页
+                    components: {
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
+                        Main: () => import('../components/match/matchStarted.vue'),
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
+                    }
+                },
+                {
+                    path: '/matchended', // 嵌套路由里默认是哪个网页
+                    components: {
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
+                        Main: () => import('../components/match/matchEnded.vue'),
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
+                    }
+                },
+                {
+                    path: '/matchcanceled', // 嵌套路由里默认是哪个网页
+                    components: {
+                        Header: () => import('../components/common/headerPanel.vue'),
+                        LeftSidebar: () => import('../components/side/sidebarLogged.vue'),
+                        Main: () => import('../components/match/matchCanceled.vue'),
+                        MainFooter: () => import('../components/common/footerPanel.vue'),
+                        RightSidebar: () => import('../components/chat/chatPanel.vue')
+                    }
                 },
                 {
                     path: '/friends', // 嵌套路由里默认是哪个网页

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-     $(function(){
+$(function(){
 
 var matchStatus = 'matchsoon';
 var countDownDate;

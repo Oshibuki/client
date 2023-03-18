@@ -31,9 +31,9 @@
         <li id="wbmm_play" class="user-menu bg-brown">
 
             <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle">
+            <router-link to="/play" class="dropdown-toggle">
                 <img src="@/assets/img/wbmm_icon.png" class="user-image">
-            <span id="wbmm_lobby_status" class="hidden-xs">NOT IN LOBBY</span></a>
+            <span id="wbmm_lobby_status" class="hidden-xs">{{ matchStatusStore.wbmm_lobby_status}}</span></router-link>
         </li>
 
 
@@ -71,21 +71,13 @@
 
 
 </template>
-<script>
+<script setup>
 import $ from 'jquery'
+import useMatchStatusStore from '../../stores/match';
 
-export default {
-    data(){
-        return {
-
-        }
-    },
-    methods:{
-        controlSidebarToggle:function(){
-            $('body').toggleClass("control-sidebar-open")
-        }
-    }
-
+const matchStatusStore = useMatchStatusStore()
+function controlSidebarToggle(){
+    $('body').toggleClass("control-sidebar-open")
 }
 </script>
 <style lang="">

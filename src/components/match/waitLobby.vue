@@ -17,7 +17,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div id="lobby_status" class="text-center">
-                                    <h2>{{matchStatusStore.currentLobby.length+"/"+matchStatusStore.gamemode}} PLAYERS IN THE LOBBY</h2>
+                                    <h2>{{ matchStatusStore.lobbyCaption }}</h2>
                                 </div>
                             </div>
                             <button
@@ -46,7 +46,8 @@
 
                     </div>
                     <button v-if="!matchStatusStore.myLobbyStatus.lobbyStatus && matchStatusStore.lobbyInfo.lobbyFull"
-                     id="accept_match" type="submit" class="btn btn-success btn-block btn-flat btn-lg hidden-xs">
+                     id="accept_match" type="submit" @click="onAcceptQueue"
+                     class="btn btn-success btn-block btn-flat btn-lg hidden-xs">
                         <b>Accept</b>
                     </button>
                     <button v-if="!matchStatusStore.lobbyInfo.lobbyFull" @click="onExitQueue" id="exit_queue" type="submit"
@@ -74,6 +75,11 @@ const userStore = useUserStore()
 const onExitQueue = function(){
     userStore.socket.emit("exitlobby")
 }
+
+const onAcceptQueue = function(){
+    userStore.socket.emit("acceptmatch")
+}
+
 </script>
 
 <style lang="scss" scoped>
